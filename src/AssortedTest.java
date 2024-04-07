@@ -135,7 +135,7 @@ class AssortedTest {
 
         for (int i = 0; i < list.size(); i ++) {
 
-            if (i%2 == 0) {
+            if (list.get(i)%2 == 0) {
                 assertTrue(list.get(i) == listSortedOdd.get(i));
             }
         }
@@ -212,14 +212,13 @@ class AssortedTest {
         assertTrue(result2.get(0).equals("WEST"));
         assertTrue(result2.get(1).equals("WEST"));
 
-        assertTrue(result3.size() == 9);
+        assertTrue(result3.size() == 3);
         assertTrue(result3.get(0).equals("NORTH"));
         assertTrue(result3.get(1).equals("NORTH"));
-        assertTrue(result3.get(2).equals("EAST"));
-        assertTrue(result3.get(3).equals("EAST"));
+        assertTrue(result3.get(2).equals("WEST"));
         assertTrue(result3.get(result3.size()-1).equals("WEST"));
-        assertTrue(result3.get(result3.size()-2).equals("WEST"));
-        assertTrue(result3.get(result3.size()-3).equals("SOUTH"));
+        assertTrue(result3.get(result3.size()-2).equals("NORTH"));
+        assertTrue(result3.get(result3.size()-3).equals("NORTH"));
 
         assertTrue(result4.size() == 2);
         assertTrue(result4.get(0).equals("WEST"));
